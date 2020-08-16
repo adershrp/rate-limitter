@@ -40,3 +40,12 @@ rate-limiter:
       duration: 120
       threshold: 120
 ```
+
+### Include Lib in POM using.
+```
+		<dependency>
+			<groupId>com.rate.limitter</groupId>
+			<artifactId>rate-limitter</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+```
