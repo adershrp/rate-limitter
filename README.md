@@ -16,3 +16,25 @@ default.user-api.threshold => If User+API limit not pre configured, value config
 
 #### If Properties default.user-api.duration and default.user-api.threshold not present, rate-limitter won't get configured for an application.
 
+### Sample application.yaml configuration
+
+default:
+  user-api:
+    duration: 120
+    threshold: 60
+rate-limiter:
+  user-api-map:
+    user1:
+    - api: /v1/sample/second-api
+      duration: 120
+      threshold: 90
+    - api: /v1/sample/first-api
+      duration: 120
+      threshold: 60
+    user2:
+    - api: /v1/sample/second-api
+      duration: 120
+      threshold: 60
+    - api: /v1/sample/first-api
+      duration: 120
+      threshold: 120
